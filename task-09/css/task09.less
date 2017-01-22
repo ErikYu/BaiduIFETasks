@@ -1,0 +1,238 @@
+@headerheight: 56px;
+@searchheight: 30px;
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei";
+}
+a{
+  text-decoration: none;
+}
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+ul{
+  list-style: none;
+}
+header{
+  height: @headerheight;
+  background-color: #2189bf;
+  min-width: 1280px;
+  #logo{
+    padding:10px;
+    float: left;
+    margin-left: 50px;
+    height:36px;
+  }
+  .login{
+    height: @headerheight;
+    float: right;
+    box-sizing: border-box;
+    padding-top: (@headerheight - @searchheight) / 2;
+    margin-right: 50px;
+    #search{
+      width: 300px;
+      height: @searchheight;
+      border: none;
+      padding: 5px 20px;
+      padding-left: 30px;
+      border-radius: @searchheight/2;
+      box-sizing: border-box;
+      background: #fff url("../img/zoom.png") no-repeat 10px;
+    }
+    #search:focus{
+      outline: none;
+    }
+    span{
+      margin-left: 50px;
+      a{
+        color: #ffffff;
+        font-size: 14px;
+      }
+      a:before{
+        background: url("../img/login.png") no-repeat;
+        display: inline-block;
+        content: '';
+        width:15px;
+        height:15px;
+        background-size: contain;
+        margin-right: 10px;
+        transform: translateY(2px);
+      }
+    }
+  }
+}
+article{
+  width: 1280px;
+  margin: 0 auto;
+  background-color: #2a2e3d;
+  .left{
+    width: 260px;
+    float: left;
+    background-color: #2b2e3d;
+    //height:300px;
+    a{
+      color: #67778b;
+    }
+
+    .left-user{
+      height:150px;
+      .left-user-name{
+        text-align: center;
+        color: #ffffff;
+        height:90px;
+        padding-top: 20px;
+        box-sizing: border-box;
+        .left-user-name-head{
+          display:inline-block;
+          background: url("../img/head.jpg");
+          background-size: cover;
+          height:50px;
+          width:50px;
+          border-radius: 25px;
+          vertical-align: middle;
+        }
+        .left-user-name-id{
+          vertical-align: middle;
+        }
+      }
+      .left-user-info{
+        height: 60px;
+        div{
+          color: #67778b;
+          text-align: center;
+          float: left;
+          width:50%;
+          box-sizing: border-box;
+        }
+        div:first-child{
+          border-right:1px solid;
+        }
+      }
+    }
+    .left-tree{
+      font-size: 14px;
+      >ul{
+        >.active{
+          background-color: #383d4e;
+          >h3{
+            color: #ffffff;
+          }
+          .left-tree-content-tree{
+            display: block;              /*设置激活显示*/
+            >ul{
+              >.open{
+                background: url("../img/file_cur.png") no-repeat 1px 3px;
+                >a{
+                  color: #ffffff;
+                }
+                >ul{
+                  display: block;
+                }
+              }
+              >li{
+                padding-left: 20px;
+                background: url("../img/file_close.png") no-repeat 1px 3px;
+                margin-top: 10px;
+                >ul{
+                  display: none;
+                  li{
+                    /*li修改前面的点的样式，使用background属性*/
+                    padding-left: 10px;
+                    background: url("../img/doc_close.png") no-repeat 5px;
+                    text-indent: 10px;
+                    margin-top: 5px;
+                  }
+                  li.chosen{
+                    background: url("../img/doc_open.png") no-repeat 5px;
+                    >a{
+                      color: #ffffff;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .left-tree-content-tree{
+          display: none;                 /*设置默认不显示*/
+        }
+        .left-tree-content{
+          display: block;
+          box-sizing: border-box;
+          padding-left: 45px;
+          color: #67778b;
+          padding-top:10px;
+          padding-bottom:10px;
+          h4,h5{
+            font-size: 14px;
+          }
+        }
+        .left-tree-content:hover{
+          background-color: #383d4e;
+        }
+      }
+    }
+  }
+  .right{
+    width: 1020px;
+    float: left;
+    background-color: #eeeeed;
+    .right-header{
+      background-color: #ffffff;
+      height:36px;
+      font-size: 16px;
+      padding-top: 10px;
+      padding-left: 30px;
+      a{
+        color: #aaa;
+      }
+      a:hover{
+        color: #6898c2;
+      }
+      color: #aaa;
+    }
+    .right-container{
+      padding-left: 50px;
+      padding-top:20px;
+      .right-content{
+        .right-content-search{
+          width:890px;
+          height:86px;
+          background-color: #ffffff;
+          border: 1px solid #dddfe1;
+          padding-top: 15px;
+          padding-left: 30px;
+          .right-content-search-info{
+            color: #aaa;
+            width:120px;
+            float: left;
+            margin-right: 20px;
+            label{
+              font-size: 12px;
+            }
+            select{
+              -webkit-appearance: none;
+              width:70px;
+              height:24px;
+              line-height: 22px;
+              font-size: 14px;
+              background: url("../img/blue_arrow.png") no-repeat center right;
+              outline: none;
+              margin-left: 5px;
+            }
+          }
+          #right-content-search-people{
+            width: 190px;
+            select{
+              width: 130px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
