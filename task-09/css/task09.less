@@ -275,14 +275,39 @@ article{
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
+            text-align: center;
+            p{
+              position: relative;
+              top:10px;
+            }
+            p.history-money{
+              margin-top: 3px;
+              span:first-child{
+                color: #aaa;
+              }
+              span:last-child{
+                color: #e96217;
+                font-size: 26px;
+                font-weight: bold;
+              }
+            }
           }
           .right-content-history-tree:hover{
             border-top: 4px solid #6389cc;
+          }
+          .right-content-history-tree:hover>p.history-time{
+            position: relative;
+            top: 8px;
+          }
+          .right-content-history-tree:hover>p.history-money{
+            position: relative;
+            top: 7px;
           }
         }
         .right-content-count{
           width:890px;
           height:86px;
+          margin-top: 10px;
           .right-content-count-tree{
             float: left;
             height:inherit;
@@ -290,6 +315,103 @@ article{
             margin-right:10px;
             background-color: #ffffff;
             border: 1px solid #dddfe1;
+          }
+        }
+        .right-content-project{
+          width:920px;
+          height:360px;
+          margin-top: 10px;
+          .right-content-project-left{
+            float: left;
+            height:inherit;
+            width:530px;
+            background-color: #ffffff;
+            margin-right:10px;
+            border: 1px solid #dddfe1;
+            border-radius: 10px;
+            .right-content-project-left-header{
+              height:42px;
+              background-color: #f4f5f6;
+              border-top-left-radius: inherit;
+              border-top-right-radius: inherit;
+              color: #535353;
+              box-sizing: border-box;
+              padding-top:10px;
+              padding-left: 25px;
+            }
+            .right-content-project-left-content{
+              padding: 12px 0 0 20px;
+              ul{
+                display: block;
+                li{
+                  float: left;
+                  display: inline-block;
+                  width:80px;
+                  height:30px;
+                  text-align: center;
+                  margin-right:3px;
+                  background-color: #ededef;
+                  color: #535353;
+                  border-top-left-radius: 5px;
+                  border-top-right-radius: 5px;
+                  box-sizing: border-box;
+                  border: 2px solid #ededef;
+                  border-bottom: none;
+                }
+                li.tabactive{
+                  background-color: #ffffff;
+                  border: 2px solid #dddfe1;
+                  border-bottom: none;
+                }
+              }
+              div.right-content-project-left-content-table{
+                border:2px solid #dddfe1;
+                padding: 28px 37px;
+                width:490px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+              }
+              table{
+                border-top: 1px solid #dddfe1;
+                border-left: 1px solid #dddfe1;
+                td{
+                  width:100px;
+                  height:30px;
+                  border-right:1px solid #dddfe1;
+                  border-bottom:1px solid #dddfe1;
+                  text-align: center;
+                  color: #535353;
+                }
+                td:hover{
+                  background-color: #9a9a9a;
+                }
+              }
+              .zhebi{
+                width:76px;
+                height:10px;
+                position: relative;
+                top:-250px;
+                left:2px;
+                background-color: #ffffff;
+              }
+            }
+          }
+          .right-content-project-right{
+            float: left;
+            height:inherit;
+            width:350px;
+            background-color: #ffffff;
+            .right-content-project-left-header{
+              height:42px;
+              background-color: #f4f5f6;
+              border-top-left-radius: inherit;
+              border-top-right-radius: inherit;
+              color: #535353;
+              box-sizing: border-box;
+              padding-top:10px;
+              padding-left: 25px;
+            }
           }
         }
       }
