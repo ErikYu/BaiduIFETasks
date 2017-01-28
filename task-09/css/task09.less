@@ -206,6 +206,7 @@ article{
           border: 1px solid #dddfe1;
           padding-top: 15px;
           padding-left: 30px;
+          box-sizing: border-box;
           .right-content-search-info{
             color: #aaa;
             width:120px;
@@ -260,22 +261,27 @@ article{
           }
         }
         .right-content-history{
-          width:890px;
+          width:920px;
           height:65px;
-          //background-color: #ffffff;
-          //border: 1px solid #dddfe1;
           margin-top: 10px;
-          .right-content-history-tree{
+          .right-content-history-left,.right-content-history-tree,.right-content-history-right,.right-content-history-query{
             float: left;
+            height:inherit;
             background-color: #ffffff;
             border: 1px solid #dddfe1;
-            margin-right: 5px;
-            height: inherit;
-            width:111px;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
             box-sizing: border-box;
+            margin-right: 5px;
             text-align: center;
+
+          }
+          .right-content-history-left,.right-content-history-right{
+            width:30px;
+          }
+          .right-content-history-query{
+            width:124px;
+          }
+          .right-content-history-tree{
+            width:111px;
             p{
               position: relative;
               top:10px;
@@ -297,34 +303,79 @@ article{
           }
           .right-content-history-tree:hover>p.history-time{
             position: relative;
-            top: 8px;
+            top: 7px;
           }
           .right-content-history-tree:hover>p.history-money{
             position: relative;
-            top: 7px;
+            top: 8px;
           }
         }
         .right-content-count{
-          width:890px;
+          width:920px;
           height:86px;
           margin-top: 10px;
+          #right-content-count-blue{
+            border-left:4px solid #2189bf;
+            >div:last-child{
+              background-color: #2189bf;
+            }
+          }
+          #right-content-count-green{
+            border-left:4px solid #43b29e;
+            >div:last-child{
+              background-color: #43b29e;
+            }
+          }
+          #right-content-count-red{
+            border-left:4px solid #d04b36;
+            >div:last-child{
+              background-color: #d04b36;
+            }
+          }
+          #right-content-count-yellow{
+            border-left:4px solid #e2cd47;
+            >div:last-child{
+              background-color: #e2cd47;
+            }
+          }
           .right-content-count-tree{
             float: left;
             height:inherit;
-            width:150px;
-            margin-right:10px;
+            width:200px;
+            margin-right:30px;
             background-color: #ffffff;
             border: 1px solid #dddfe1;
+            box-sizing: border-box;
+            position: relative;
+            >div{
+              position: absolute;
+              top:50%;
+              margin-top: -30px;
+
+            }
+            >div:first-child{
+              width:100px;
+              float: left;
+              left:20px;
+              p{
+                line-height:30px;
+              }
+            }
+            >div:last-child{
+              width:80px;
+              height: 60px;
+              float: left;
+              left:100px;
+            }
           }
         }
         .right-content-project{
           width:920px;
           height:360px;
           margin-top: 10px;
-          .right-content-project-left{
+          .right-content-project-left,.right-content-project-right{
             float: left;
             height:inherit;
-            width:530px;
             background-color: #ffffff;
             margin-right:10px;
             border: 1px solid #dddfe1;
@@ -339,6 +390,11 @@ article{
               padding-top:10px;
               padding-left: 25px;
             }
+          }
+          .right-content-project-left{
+
+            width:530px;
+
             .right-content-project-left-content{
               padding: 12px 0 0 20px;
               ul{
@@ -398,11 +454,58 @@ article{
             }
           }
           .right-content-project-right{
-            float: left;
-            height:inherit;
+            //float: left;
+            //height:inherit;
             width:350px;
+            //background-color: #ffffff;
+            .right-content-project-right-content{
+              padding-left:34px;
+              padding-top:15px;
+              padding-right:34px;
+              div{
+                padding-left: 15px;
+                box-sizing: border-box;
+                h3{
+                  color: #535353;
+                  font-size:14px;
+                }
+                p{
+                  color: #535353;
+                }
+              }
+              .content-title{
+                border-bottom: 1px solid #9a9a9a;
+              }
+              .content-price{
+                float: left;
+                border-bottom: 1px solid #9a9a9a;
+                border-right: 1px solid #9a9a9a;
+                height:44px;
+                width:100px;
+              }
+              .content-charge{
+                border-bottom:1px solid #9a9a9a;
+                //float: left;
+                height:44px;
+              }
+              .content-discription{
+
+              }
+            }
+          }
+        }
+        .right-content-last{
+          width:920px;
+          height: 356px;
+          margin-top:10px;
+          .right-content-last-date,.right-content-last-rate{
+            height:inherit;
             background-color: #ffffff;
-            .right-content-project-left-header{
+            float: left;
+            margin-right: 10px;
+            border: 1px solid #dddfe1;
+            border-radius: 10px;
+            .right-content-last-header{
               height:42px;
               background-color: #f4f5f6;
               border-top-left-radius: inherit;
@@ -411,6 +514,152 @@ article{
               box-sizing: border-box;
               padding-top:10px;
               padding-left: 25px;
+            }
+          }
+          .right-content-last-date{
+            width:350px;
+            .right-content-last-date-content{
+              padding:12px 20px;
+              form{
+                margin-bottom: 10px;
+                select{
+                  -webkit-appearance: none;
+                  height:22px;
+                  background-color: #ffffff;
+                  border:1px solid #cdcece;
+                }
+                select#yy{
+                  width:64px;
+                }
+                select#mm{
+                  width:84px;
+                }
+                select#select-date{
+                  width:75px;
+                }
+                input{
+                  background-color: #ffffff;
+                  width:64px;
+                  height:22px;
+                  border:1px solid #cdcece;
+                }
+              }
+              ul{
+                li{
+                  text-align: center;
+                  float: left;
+                  width:44px;
+                }
+              }
+              table{
+                tr{
+                  td{
+                    text-align: center;
+                    display: inline-block;
+                    width:44px;
+                    height:46px;
+                    font-size:14px;
+                  }
+                }
+              }
+            }
+          }
+          .right-content-last-rate{
+            width:530px;
+            .right-content-last-rate-content{
+              margin:20px 44px;
+            }
+            .right-content-last-table{
+              border:none;
+              border-top:1px solid #67778b;
+              border-left:1px solid #67778b;
+              tr{
+                th{
+                  border-right:1px solid #67778b;
+                  border-bottom:1px solid #67778b;
+                  height:28px;
+                }
+                th:first-child{
+                  width:68px;
+                }
+                th:nth-child(2){
+                  width:90px;
+                }
+                th:last-child{
+                  width:290px;
+                }
+                td{
+                  border-right:1px solid #67778b;
+                  border-bottom:1px solid #67778b;
+                  text-align: center;
+                }
+                td:last-child{
+                  text-align: left;
+                  box-sizing: border-box;
+                  padding-left: 20px;
+                  //position: relative;
+                  >span{
+                    float: left;
+                  }
+                  >div{
+                    float: left;
+                    width: 150px;
+                    height:5px;
+                    background-color: #2a2e3d;
+                    position: relative;
+                    top:7px;
+                    margin-left: 20px;
+                    >div{
+                      width:130px;
+                      height:inherit;
+                      background-color: #e74e4a;
+                    }
+                  }
+                }
+              }
+              tr:hover{
+                background-color: #9a9a9a;
+              }
+              #honda{
+                >td:last-child>div{
+                  >div{
+                    width:110px;
+                    background-color: #2189bf;
+                  }
+                }
+              }
+              #ford{
+                >td:last-child>div{
+                  >div{
+                    width:92px;
+                    background-color: #2189bf;
+                  }
+                }
+              }
+              #bmw{
+                >td:last-child>div{
+                  >div{
+                    width:80px;
+                    background-color: #2189bf;
+                  }
+                }
+              }
+              #hyundai{
+                >td:last-child>div{
+                  >div{
+                    width:70px;
+                    background-color: #2189bf;
+                  }
+                }
+              }
+              #kia{
+                >td:last-child>div{
+                  >div{
+                    width:55px;
+                    background-color: #2189bf;
+                  }
+                }
+              }
             }
           }
         }
