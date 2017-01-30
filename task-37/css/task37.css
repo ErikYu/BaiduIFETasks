@@ -34,7 +34,7 @@ article div.alert-window{
 }
 article div.alert-window{
     background-color: #ffffff;
-    display: none;
+    /*display: none;*/
 }
 article div.alert-window div.alert-window-header{
     height:30px;
@@ -45,4 +45,15 @@ article div.alert-window div.alert-window-header span#close{
 }
 article div.alert-window div.alert-window-content{
     background-color: #ffffff;
+    height:270px;
+    position: relative;
+}
+div.size{
+    width:20px;
+    height:20px;
+    background-color: #6898c2;
+    position: absolute;
+    /*border:1px solid;*/
+    bottom: 0px;
+    right: 0px;
 }
