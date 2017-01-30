@@ -34,7 +34,7 @@ article div.alert-window{
 }
 article div.alert-window{
     background-color: #ffffff;
-    /*display: none;*/
+    display: none;
 }
 article div.alert-window div.alert-window-header{
     height:30px;
